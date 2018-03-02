@@ -1,0 +1,13 @@
+{
+  "name": "venori website",
+  "description": "venori website",
+  "main": "index.html",
+  "keywords": [
+    "venori"
+  ],
+  "authors": [
+    "Yuliya"
+  ],
+  "license": "MIT",
+  "homepage": ""
+}

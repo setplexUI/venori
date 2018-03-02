@@ -1,0 +1,1645 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Gemstone Inventory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"/>
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-slider.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<a name="scroller"></a>
+<!-- User Info-Bar Begins -->
+<div class="conteiner-fluid header_bg">
+    <div class="user-info-bar container">
+        <div class="col-lg-5 col-md-2 col-sm-3 col-xs-6">
+            <p><i class="fa fa-phone"></i> 888-88-88</p>
+        </div>
+        <div class="col-lg-7 col-md-10 col-sm-9 col-xs-12 tab_mob text-right">
+            <div class="col-xs-3 col-md-3 login_modal high_menu">
+                <a href="#" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"></i>
+                    <span>Login</span></a>
+                <!-- The Modal Login Begin-->
+                <!-- Button to open the modal login form -->
+                <!-- The Modal -->
+                <div id="id01" class="modal">
+                    <!-- Modal Content -->
+                    <div class="modal-content animate text-left">
+
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab"
+                                                                      data-toggle="tab">
+                                Login</a></li>
+                            <li role="presentation"><a href="#register" aria-controls="register" role="tab"
+                                                       data-toggle="tab">Create new account</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="login">
+                                <form action="/action_page.php">
+                      <span onclick="document.getElementById('id01').style.display='none'"
+                            class="close" title="Close Modal">&times;</span>
+                                    <div class="row login_form">
+                                        <div class="col-md-12 text-center password"><p>Login</p></div>
+                                        <div class="col-md-12 text-center password">
+                                            <input type="text" placeholder="Username" name="uname" required>
+                                        </div>
+                                        <div class="col-md-12 text-center password">
+                                            <input type="password" placeholder="Password" name="psw" required>
+                                        </div>
+                                        <div class="col-md-12 text-center login">
+                                            <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                                            <button type="button"
+                                                    onclick="document.getElementById('id01').style.display='none'"
+                                                    class="cancelbtn btn btn-primary btn-lg">Cancel
+                                            </button>
+                                        </div>
+
+                                        <div class="col-md-12 text-center ">
+                                            <input type="checkbox" checked="checked"> Remember me
+                                        </div>
+                                        <div class="col-md-12 text-center create_account">
+                                            <span class="psw"> <a href="#">Forgot password?</a></span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="register">
+
+                                <form  action="/action_page.php">
+                      <span onclick="document.getElementById('id01').style.display='none'"
+                            class="close" title="Close Modal">&times;</span>
+                                    <div class="row login_form">
+                                        <div class="col-md-12 text-center password"><p>Create new account</p></div>
+                                        <div class="col-md-12 text-center password">
+                                            <input type="text" placeholder="Email" name="uname" required>
+                                        </div>
+                                        <div class="col-md-12 text-center password">
+                                            <input type="password" placeholder="Password" name="psw" required>
+                                        </div>
+                                        <div class="col-md-12 text-center login">
+                                            <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                                            <button type="button"
+                                                    onclick="document.getElementById('id01').style.display='none'"
+                                                    class="cancelbtn btn btn-primary btn-lg">Cancel
+                                            </button>
+                                        </div>
+
+                                        <div class="col-md-12 text-center remember">
+                                            <input type="checkbox" checked="checked"> Remember me
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- The Modal Login Ends-->
+            <div class="col-xs-3 col-md-3 high_menu">
+                <a href="favorite.html"><i class="fa fa-heart"></i> Favorites</a>
+            </div>
+            <div class="col-xs-3 col-md-3 high_menu">
+
+                <div class="dropdown countries-dropdown">
+                    <button class="dropdown-toggle dropdownMenu2" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                        <i class="fa fa-flag"></i> Country
+                        <span class="fa fa-caret-down hidden-xs"></span>
+                    </button>
+                    <ul class="dropdown-menu countries" aria-labelledby="dropdownMenu2">
+                        <li><a data-value="Belarus" href="#">BELARUS</a></li>
+                        <li><a data-value="USA" href="#">USA</a></li>
+                        <li><a data-value="UK" href="#">UK</a></li>
+                        <li><a data-value="China" href="#">CHINA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-3 high_menu">
+                <a href="shipping_cart.html"><i class="fa fa-shopping-cart"></i> Cart (3)</a>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-8 text-right">
+            <div class="input-group col-md-12 searchInput">
+                <label for="searchDiamonds">
+                    <input id="searchDiamonds" type="text" class="search-query form-control" placeholder="Search"/>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- User Info-Bar Ends -->
+
+<!-- Header Begins -->
+<div class="header container-fluid navigation">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html"> <img src="img/venori_logo.png" alt="" class="venori_logo pull-left img-responsive"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!--Diamonds dropdown Begin-->
+                    <li class="dropdown mega-dropdown">
+                        <a href="diamonds.html" title="Diamonds">DIAMONDS </a>
+
+                        <!-- Dropdown Menu Begin-->
+                        <ul class="dropdown-menu mega-dropdown-menu row hidden-xs">
+                            <li class="head_diam text-center pull-left">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3 col-sm-4"><h4>Search Shapes</h4></div>
+                                <div class="col-md-3 col-sm-4"><h4>Design your own</h4></div>
+                                <div class="col-md-3 col-sm-4"><h4>The Venori Standard</h4></div>
+                            </li>
+                            <li class="row-eq-height-dropdown pull-left">
+                                <div class="col-md-3 border_right hidden-sm">
+                                    <img src="img/fine/create_diam.jpg" class="img-responsive" alt="First slide">
+                                </div>
+                                <div class="col-md-3 col-sm-4 text-center border_right">
+                                    <div class="row">
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape1.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape1.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape1.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape2.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape2.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape2.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape1.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape1.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape1.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape1.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape1.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                        <div class="col-md-4 col-xs-4 border_hover btn"><img src="img/popup/shape1.jpg"
+                                                                                             class="img-responsive"
+                                                                                             alt="First slide">
+                                        </div>
+                                    </div>
+                                    <p>Venori Preferred Diamonds</p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 text-center border_right">
+                                    <p><a href="#"> Engagement Rings</a></p>
+                                    <p><a href="#"> Earrings</a></p>
+                                    <p><a href="#"> Pendants</a></p>
+                                    <p><a href="#"> 3 Stone Ring</a></p>
+                                    <p><a href="#"> 5 Stone Ring</a></p>
+                                </div>
+                                <div class="col-md-3 col-sm-4 text-center">
+                                    <p><a href="#"> Conflict Free Diamonds</a></p>
+                                    <p><a href="#"> 30 Day No-Hassel Return Policy</a></p>
+                                    <p><a href="#"> Lowest Price Guarantee</a></p>
+                                    <p><a href="#"> Diamond Upgrade Policy</a></p>
+                                    <p><a href="#"> Diamond Price Matche</a></p>
+                                    <p><a href="#"> Free shipping</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Dropdown Menu End-->
+                    </li>
+                    <!--Diamonds dropdown End-->
+
+                    <!--ENGAGEMENT RINGS dropdown Begin-->
+                    <li class="dropdown mega-dropdown">
+                        <a href="engagement.html" title="ENGAGEMENT RINGS">ENGAGEMENT RINGS</a>
+
+                        <!-- Dropdown Menu Begin-->
+                        <ul class="dropdown-menu mega-dropdown-menu row hidden-xs">
+                            <li class="head_diam text-center pull-left">
+                                <div class="col-md-4 col-sm-4"><h4>Create your own ring</h4></div>
+                                <div class="col-md-4 col-sm-4"><h4>Engagement Rings</h4></div>
+                                <div class="col-md-4 col-sm-4"><h4>The Venori Standard</h4></div>
+                            </li>
+                            <li class="row-eq-height-dropdown pull-left">
+                                <div class="col-md-4 col-sm-4 border_right text-center">
+                                    <img src="img/fine/create_diam.jpg" class="img-responsive" alt="First slide">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p><a href="#">Engagement Rings</a></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p><a href="#">Diamonds</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 text-center border_right">
+                                    <div class="row">
+                                        <div class="col-md-2 col-sm-4 col-xs-2  border_hover btn"><img
+                                                src="img/popup/shape1.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Solitare</p>
+                                        </div>
+                                        <div class="col-md-2 col-sm-4 col-xs-2  border_hover btn"><img
+                                                src="img/popup/shape1.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Pave</p>
+                                        </div>
+                                        <div class="col-md-2 col-sm-4 col-xs-2  border_hover btn"><img
+                                                src="img/popup/shape1.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Three<br> Stone</p>
+                                        </div>
+
+                                        <div class="col-md-2 col-sm-4 col-xs-2  border_hover btn"><img
+                                                src="img/popup/shape2.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Tension</p>
+                                        </div>
+                                        <div class="col-md-2 col-sm-4 col-xs-2  border_hover btn"><img
+                                                src="img/popup/shape2.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Vintage</p>
+                                        </div>
+                                        <div class="col-md-2 col-sm-4 col-xs-2 border_hover btn"><img
+                                                src="img/popup/shape2.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Three<br> Stone?</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2 col-sm-4 col-xs-4 border_hover btn"><img
+                                                src="img/popup/shape1.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Side<br> Stone</p>
+                                        </div>
+                                        <div class="col-md-2 col-sm-4 col-xs-4 border_hover btn"><img
+                                                src="img/popup/shape1.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Halo</p>
+                                        </div>
+                                        <div class="col-md-2 col-sm-4 col-xs-4 border_hover btn"><img
+                                                src="img/popup/shape1.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Chanel</p>
+                                        </div>
+
+                                        <div class="col-md-2 col-sm-4 col-xs-4 border_hover btn"><img
+                                                src="img/popup/shape1.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Bridal</p>
+                                        </div>
+                                        <div class="col-md-2 col-sm-4 col-xs-4 border_hover btn"><img
+                                                src="img/popup/shape1.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Solitare</p>
+                                        </div>
+                                        <div class="col-md-2 col-sm-4 col-xs-4  border_hover btn"><img
+                                                src="img/popup/shape1.jpg"
+                                                class="img-responsive"
+                                                alt="First slide">
+                                            <p>Solitare</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-4 text-center">
+                                    <p><a href="#"> Conflict Free Diamonds</a></p>
+                                    <p><a href="#"> 30 Day No-Hassel Return Policy</a></p>
+                                    <p><a href="#"> Lowest Price Guarantee</a></p>
+                                    <p><a href="#"> Diamond Upgrade Policy</a></p>
+                                    <p><a href="#"> Diamond Price Matche</a></p>
+                                    <p><a href="#"> Free shipping</a></p>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <!-- Dropdown Menu End-->
+                    </li>
+                    <!--ENGAGEMENT RINGS dropdown End-->
+
+                    <!--WEDDING RINGS dropdown Begin-->
+                    <li class="dropdown mega-dropdown">
+                        <a href="weddings.html" title="WEDDING RINGS">WEDDING RINGS</a>
+
+                        <!-- Dropdown Menu Begin-->
+                        <ul class="dropdown-menu mega-dropdown-menu row hidden-xs">
+                            <li class="head_diam text-center pull-left">
+                                <div class="col-md-8 col-sm-8"><h4>Wedding Bands</h4></div>
+                                <div class="col-md-4 col-sm-4"><h4>The Venori Standard</h4></div>
+                            </li>
+                            <li class="row-eq-height-dropdown pull-left">
+                                <div class="col-md-4 col-sm-4 text-center">
+                                    <h4 class="border_bottom_brown">Hers</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="col-md-6 btn border_hover">
+                                                <p>Classic</p>
+                                                <img src="img/popup/classic.jpg" alt="First slide">
+                                            </div>
+                                            <div class="col-md-6 btn border_hover">
+                                                <p>Diamond</p>
+                                                <img src="img/popup/classic.jpg" alt="First slide">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="col-md-6 btn border_hover">
+                                                <p>Eternity</p>
+                                                <img src="img/popup/classic.jpg" alt="First slide">
+                                            </div>
+                                            <div class="col-md-6 btn border_hover">
+                                                <p>Anniversary</p>
+                                                <img src="img/popup/classic.jpg" alt="First slide">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 text-center border_right">
+                                    <h4 class="border_bottom_brown">His</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="col-md-6 btn border_hover">
+                                                <p>Classic</p>
+                                                <img src="img/popup/classic.jpg" alt="First slide">
+                                            </div>
+                                            <div class="col-md-6 btn border_hover">
+                                                <p>Diamond</p>
+                                                <img src="img/popup/classic.jpg" alt="First slide">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="col-md-6 btn border_hover">
+                                                <p>Eternity</p>
+                                                <img src="img/popup/classic.jpg" alt="First slide">
+                                            </div>
+                                            <div class="col-md-6 btn border_hover">
+                                                <p>Anniversary</p>
+                                                <img src="img/popup/classic.jpg" alt="First slide">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-4 text-center">
+                                    <p><a href="#"> Conflict Free Diamonds</a></p>
+                                    <p><a href="#"> 30 Day No-Hassel Return Policy</a></p>
+                                    <p><a href="#"> Lowest Price Guarantee</a></p>
+                                    <p><a href="#"> Diamond Upgrade Policy</a></p>
+                                    <p><a href="#"> Diamond Price Matche</a></p>
+                                    <p><a href="#"> Free shipping</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Dropdown Menu End-->
+                    </li>
+                    <!--WEDDING RINGS dropdown End-->
+                    <!--FINE JEWELRY dropdown Begin-->
+                    <li class="dropdown mega-dropdown">
+                        <a href="fine_jewelry.html" title="FINE JEWELRY">FINE JEWELRY</a>
+
+                        <!-- Dropdown Menu Begin-->
+                        <ul class="dropdown-menu mega-dropdown-menu row hidden-xs">
+                            <li class="head_diam text-center pull-left">
+                                <div class="col-md-3 col-sm-3"><h4>Design Your Own</h4></div>
+                                <div class="col-md-6 col-sm-5"><h4>Fine Jewellery</h4></div>
+                                <div class="col-md-3 col-sm-4"><h4>The Venori Standard</h4></div>
+                            </li>
+                            <li class="row-eq-height-dropdown pull-left">
+                                <div class="col-md-3 text-center border_right">
+                                    <img src="img/fine/create_diam.jpg" class="img-responsive" alt="First slide">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p><a href="#">Earrings</a></p>
+                                            <p><a href="#">Pendant</a></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p><a href="#">3 Stone Ring</a></p>
+                                            <p><a href="#">5 Stone Ring</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-center border_right">
+                                    <a href="fine_jewelry_brouse.html"> <h4 class="border_bottom_brown">For Her</h4></a>
+                                    <p><a href="fine_jewelry_brouse.html">Earrings</a></p>
+
+                                    <p><a href="fine_jewelry_brouse.html">Neckalaces</a></p>
+
+                                    <p><a href="fine_jewelry_brouse.html">Bracelets</a></p>
+
+                                    <p><a href="fine_jewelry_brouse.html">Rings</a></p>
+
+                                </div>
+                                <div class="col-md-3 text-center border_right">
+                                    <a href="fine_jewelry_brouse_man.html"> <h4 class="border_bottom_brown">For Him</h4></a>
+                                    <p><a href="fine_jewelry_brouse_man.html">Rings</a></p>
+
+                                    <p><a href="fine_jewelry_brouse_man.html">Diamond</a></p>
+
+                                    <p><a href="fine_jewelry_brouse_man.html">Carved</a></p>
+
+                                    <p><a href="fine_jewelry_brouse_man.html">Alternative Metal</a></p>
+
+                                </div>
+
+                                <div class="col-md-3 text-center">
+                                    <p><a href="#"> Conflict Free Diamonds</a></p>
+                                    <p><a href="#"> 30 Day No-Hassel Return Policy</a></p>
+                                    <p><a href="#"> Lowest Price Guarantee</a></p>
+                                    <p><a href="#"> Diamond Upgrade Policy</a></p>
+                                    <p><a href="#"> Diamond Price Matche</a></p>
+                                    <p><a href="#"> Free shipping</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Dropdown Menu End-->
+                    </li>
+                    <!--FINE JEWELRY dropdown End-->
+
+                    <!--EDUCATION dropdown Begin-->
+                    <li class="dropdown mega-dropdown">
+                        <a href="education.html" title="EDUCATION">EDUCATION</a>
+
+                        <!-- Dropdown Menu Begin-->
+                        <ul class="dropdown-menu mega-dropdown-menu row hidden-xs">
+                            <li class="head_diam text-center pull-left">
+                                <div class="col-md-2 col-md-offset-1 col-sm-2"><h4>Diamonds</h4></div>
+                                <div class="col-md-2 col-sm-2"><h4>Engagement Rings</h4></div>
+                                <div class="col-md-2 col-sm-2"><h4>Gemstones</h4></div>
+                                <div class="col-md-2 col-sm-2"><h4>Metals</h4></div>
+                                <div class="col-md-2 col-sm-4"><h4>The Venori Standard</h4></div>
+                            </li>
+                            <li class="row-eq-height-dropdown pull-left">
+                                <div class="col-md-2 col-md-offset-1 border_right">
+                                    <p><a href="#">4 C’s</a></p>
+                                    <p><a href="#">Shapes</a></p>
+                                    <p><a href="#"> Anatomy</a></p>
+                                    <p><a href="#"> Certification</a></p>
+                                    <p><a href="#"> Colored Diamonds</a></p>
+
+                                </div>
+                                <div class="col-md-2 text-center border_right">
+                                    <p><a href="#"> Solıtaıre </a></p>
+                                    <p><a href="#"> Halo </a></p>
+                                    <p><a href="#"> Pave </a></p>
+                                    <p><a href="#"> Tensıon </a></p>
+                                    <p><a href="#"> Three Stone </a></p>
+                                    <p><a href="#"> Sıde Stones </a></p>
+                                    <p><a href="#"> Channel Set </a></p>
+                                </div>
+                                <div class="col-md-2 text-center border_right">
+                                    <p><a href="#">Emeralds</a></p>
+                                    <p><a href="#"> Rubies</a></p>
+                                    <p><a href="#"> Sapphires</a></p>
+
+                                </div>
+                                <div class="col-md-2 text-center border_right">
+                                    <p><a href="#"> Yellow Gold</a></p>
+                                    <p><a href="#"> White Gold</a></p>
+                                    <p><a href="#"> Rose Gold</a></p>
+                                    <p><a href="#"> Platinum</a></p>
+                                    <p><a href="#"> Palladium</a></p>
+                                </div>
+                                <div class="col-md-2 text-center">
+                                    <p><a href="#"> Conflict Free Diamonds</a></p>
+                                    <p><a href="#"> 30 Day No-Hassel Return Policy</a></p>
+                                    <p><a href="#"> Lowest Price Guarantee</a></p>
+                                    <p><a href="#"> Diamond Upgrade Policy</a></p>
+                                    <p><a href="#"> Diamond Price Matche</a></p>
+                                    <p><a href="#"> Free shipping</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Dropdown Menu End-->
+                    </li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <!--EDUCATION dropdown End-->
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+<!-- Header Ends -->
+
+<!-- Dropdown Begins -->
+<div class="container diamond_dropdown">
+    <div class="dropdown">
+
+    </div>
+</div>
+<!-- Dropdown Ends -->
+
+
+<!-- Header Ends -->
+<div class="container-fluid education_bg text-center">
+    <h3>Gemstone Inventory</h3>
+</div>
+<div class="container margin_box">
+    <div class="col-md-12 text-center"><h4>Create your own</h4></div>
+    <div class="row diam_invent text-center">
+        <a href="diamonds_brouse.html">
+        <div class="col-md-2 text-center square_grey">
+            <p class="square">1</p>
+            Choose a diamond
+        </div>
+        </a>
+        <div class="col-md-3">
+            <div class="step-line dark_line visible-lg visible-md"></div>
+        </div>
+        <a href="diamonds_brouse_settings.html">
+        <div class="col-md-2 text-center square_grey">
+            <p class="square2">2</p>
+            Choose a setting
+        </div>
+        </a>
+        <div class="col-md-3">
+            <div class="step-line light_line visible-lg visible-md"></div>
+        </div>
+        <a href="single_viewyourring.html">
+        <div class="col-md-2 text-center square_grey">
+            <p class="square2">3</p>
+            View your ring
+        </div>
+        </a>
+    </div>
+</div>
+<div class="container-fluid filter_bg margin_box">
+    <div class="container margin_top">
+        <div class="col-md-11 col-md-offset-1 text-left search_shape">
+            <h4>Shapes</h4>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-6 shape_border btn">
+            <img class="img-responsive" alt="shape1" src="img/diamond/shape1.jpg">
+            <p>Emerald</p>
+        </div>
+        <div class="col-md- col-sm-2 col-xs-6 shape_border btn">
+            <img class="img-responsive" alt="shape1" src="img/diamond/shape2.jpg">
+            <p>Sapphire</p>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-6 shape_border btn">
+            <img class="img-responsive" alt="shape1" src="img/diamond/shape3.jpg">
+            <p>Ruby</p>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-6 shape_border btn">
+            <img class="img-responsive" alt="shape1" src="img/diamond/shape4.jpg">
+            <p>Citrine</p>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-6 shape_border btn">
+            <img class="img-responsive" alt="shape1" src="img/diamond/shape5.jpg">
+            <p>Black Onyx</p>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-6 shape_border btn">
+            <img class="img-responsive" alt="shape1" src="img/diamond/shape6.jpg">
+            <p>Amethyst</p>
+        </div>
+
+    </div>
+
+
+    <div class="container ">
+        <div id="advanced_options" class="advanced_options">
+            <div class="row margin_top">
+                <div class="col-md-6 slider_handle">
+                    <div class="col-md-2">
+                        <h4>Color</h4>
+                    </div>
+                    <!--<input id="ex2" type="text" class="span2" value="" data-slider-min="0" data-slider-max="30" data-slider-step="1" data-slider-value="[0,30]"/> -->
+                    <div class="col-md-10">
+                        <input id="ex2" type="text"
+                               data-slider-tooltip="hide"
+                               data-slider-ticks="[0, 100, 200, 300, 400, 500, 600, 700]"
+                               data-slider-ticks-labels='["D", "E", "F", "G", "H" , "J", "I", "K"]'
+                               data-slider-step="100"
+                               data-slider-ticks-snap-bounds="100"
+                        />
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="col-md-2">
+                        <h4>Cut</h4>
+                    </div>
+                    <div class="col-md-10">
+                        <input id="ex5" type="text"
+                               data-provide="slider"
+                               data-slider-tooltip="hide"
+                               data-slider-ticks="[1, 2, 3, 4]"
+                               data-slider-ticks-labels='["Venori Preffered", "Ideal", "Very Good", "Good"]'
+                               data-slider-step="1"
+                               data-slider-value="3"
+                               data-slider-ticks-snap-bounds="1"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin_top">
+                <div class="col-md-6">
+                    <div class="col-md-2">
+                        <h4>Carat</h4>
+                    </div>
+                    <div class="col-md-10">
+
+                        <input id="ex3" type="text" class="span2" value="" data-slider-min="0"
+                               data-slider-max="30"
+                               data-slider-step="1" data-slider-value="[0,30]"/>
+                        <b id="ex3StartNum">5</b>
+                        <b id="ex3EndNum">25</b>
+                    </div>
+                </div>
+                <div class="col-md-6 slider_handle">
+                    <div class="col-md-2">
+                        <h4>Clarity</h4>
+                    </div>
+                    <div class="col-md-10">
+                        <input id="ex6" type="text"
+                               data-slider-tooltip="hide"
+                               data-slider-ticks="[0, 100, 200, 300, 400, 500, 600, 700]"
+                               data-slider-ticks-labels='["IF", "VVS1", "VVS2", "VS1", "VS2" , "SI1", "SI2", "I1"]'
+                               data-slider-step="100"
+                               data-slider-ticks-snap-bounds="100"
+
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="row margin_top">
+                <div class="col-md-6">
+                    <div class="col-md-2">
+                        <h4>Price</h4>
+                    </div>
+                    <div class="col-md-10">
+                        <input id="ex4" type="text" class="span2" value="" data-slider-min="0"
+                               data-slider-max="50000"
+                               data-slider-step="100" data-slider-value="[100,50000]"/>
+                        <b id="ex4StartNum">$5000</b>
+                        <b id="ex4EndNum">$40000</b>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-md-2 col-xs-2">
+                        <h4>Delivery Date</h4>
+                    </div>
+
+                    <div class="col-md-5 col-xs-5">
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' id="dateTime" class="form-control" placeholder="Ships on"/>
+                                <span class="input-group-addon">
+                        <span class="fa fa-caret-down"></span>
+                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-xs-5 col-xs-5">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle dropdownMenu" type="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Mounted
+                                <span class="fa fa-caret-down text-left"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Solitaire</a></li>
+                                <li><a href="#">Pave</a></li>
+                                <li><a href="#">Halo</a></li>
+                                <li><a href="#">Channel Set</a></li>
+                                <li><a href="#">Bridal Set</a></li>
+                                <li><a href="#">Three Stone</a></li>
+                                <li><a href="#">Tension Set</a></li>
+                                <li><a href="#">Vintage</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="container  margin_top">
+        <div class="col-md-12 text-right">
+            <a id="showHideFilters" class="btn btn-primary btn-lg btn_bottom">Hide Filters</a>
+            <a id="resetOptions" class="btn btn-primary btn-lg btn_bottom">Reset Options</a>
+        </div>
+    </div>
+</div>
+
+
+<!--Table Begins-->
+<div class="container margin_box">
+    <div class="table-responsive">
+        <table class="table">
+            <tr class="filter_bg">
+                <th>Shape</th>
+                <th>Carat</th>
+                <th>Cut</th>
+                <th>Color</th>
+                <th>Clarity</th>
+                <th>Price</th>
+                <th>Date Available</th>
+                <th><span class="glyphicon glyphicon-stop" aria-hidden="true"></span>Compare</th>
+                <th>Request Consultation</th>
+                <th>Favorite</th>
+            </tr>
+            <tr>
+                <td><a href="#" class="diamondPopup1"> Round</a></td>
+                <td><a href="#" class="diamondPopup1">1.50</a></td>
+                <td><a href="#" class="diamondPopup1">Ideal Cut</a></td>
+                <td><a href="#" class="diamondPopup1">F</a></td>
+                <td><a href="#" class="diamondPopup1">VVS1</a></td>
+                <td><a href="#" class="diamondPopup1">$20,000</a></td>
+                <td><a href="#" class="diamondPopup1">Nov 1, 2016</a></td>
+                <td><a href="#" class="diamondPopup1"><span class="glyphicon glyphicon-stop peach" aria-hidden="true"></span>Compare</a></td>
+                <td><a href="#" class="diamondPopup1"><span class="glyphicon glyphicon-stop peach" aria-hidden="true"></span>Request Consultation</a></td>
+                <td><a href="#" class="diamondPopup1">Add <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a></td>
+            </tr>
+            <tr>
+                <td><a href="#" class="diamondPopup2"> Round</a></td>
+                <td><a href="#" class="diamondPopup2">1.50</a></td>
+                <td><a href="#" class="diamondPopup2">Ideal Cut</a></td>
+                <td><a href="#" class="diamondPopup2">F</a></td>
+                <td><a href="#" class="diamondPopup2">VVS1</a></td>
+                <td><a href="#" class="diamondPopup2">$20,000</a></td>
+                <td><a href="#" class="diamondPopup2">Nov 1, 2016</a></td>
+                <td><a href="#" class="diamondPopup2"><span class="glyphicon glyphicon-stop peach" aria-hidden="true"></span>Compare</a></td>
+                <td><a href="#" class="diamondPopup2"><span class="glyphicon glyphicon-stop peach" aria-hidden="true"></span>Request Consultation</a></td>
+                <td><a href="#" class="diamondPopup2">Add <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a></td>
+            </tr>
+            <tr>
+                <td><a href="#" class="diamondPopup3"> Round</a></td>
+                <td><a href="#" class="diamondPopup3">1.50</a></td>
+                <td><a href="#" class="diamondPopup3">Ideal Cut</a></td>
+                <td><a href="#" class="diamondPopup3">F</a></td>
+                <td><a href="#" class="diamondPopup3">VVS1</a></td>
+                <td><a href="#" class="diamondPopup3">$20,000</a></td>
+                <td><a href="#" class="diamondPopup3">Nov 1, 2016</a></td>
+                <td><a href="#" class="diamondPopup3"><span class="glyphicon glyphicon-stop peach" aria-hidden="true"></span>Compare</a></td>
+                <td><a href="#" class="diamondPopup3"><span class="glyphicon glyphicon-stop peach" aria-hidden="true"></span>Request Consultation</a></td>
+                <td><a href="#" class="diamondPopup3">Add <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!--Table Ends-->
+
+<!-- Custom Modal 1-->
+<div class="custom-modal hidden-sm hidden-xs" id="custom-modal-1">
+    <span class="close-custom-modal"><i class="fa fa-close"></i></span>
+    <div class="container-fluid custom-modal-content">
+                <img src="img/summary.png" alt="summary" class="venori_logo img-responsive">
+        <div class="row">
+            <div class="col-md-9  col-sm-12">
+                <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Request Live Consultation
+                </button>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">GIA</button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h2>1.50 Carat Round Diamond</h2>
+            <p><a href="#"><i class="fa fa-truck" aria-hidden="true"></i></a>
+                Will be ready by Nov.1, 2016 loose,
+                and ready by Nov.11, 2016 mounted in a ring</p>
+            <h2>Diamond Specifications</h2>
+        </div>
+        <div class="col-md-7 col-sm-12 no_padding">
+            <div class="dropdown no_padding">
+                <button class="btn btn-lg btn-primary btn-default dropdown-toggle dropdownMenu" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    ADD DIAMOND
+                    <span class="fa fa-caret-down text-left"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Add to cart</a></li>
+                    <li><a href="#">Settings</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-12">
+            <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Compare</button>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <p>Sku #</p>
+            </div>
+            <div class="col-md-6">
+                <p>897123213</p>
+            </div>
+            <div class="col-md-6">
+                <p>Cut</p>
+            </div>
+            <div class="col-md-6">
+                <p>Ideal</p>
+            </div>
+            <div class="col-md-6">
+                <p>Fluorescence</p>
+            </div>
+            <div class="col-md-6">
+                <p>None</p>
+            </div>
+            <div class="col-md-6">
+                <p>L/W/D</p>
+            </div>
+            <div class="col-md-6">
+                <p>1.00 mm</p>
+            </div>
+            <div class="col-md-6">
+                <p>Depth %</p>
+            </div>
+            <div class="col-md-6">
+                <p>63.70</p>
+            </div>
+            <div class="col-md-6">
+                <p>Table</p>
+            </div>
+            <div class="col-md-6">
+                <p>57.00</p>
+            </div>
+            <div class="col-md-6">
+                <p>Shape</p>
+            </div>
+            <div class="col-md-6">
+                <p>Round</p>
+            </div>
+            <div class="col-md-6">
+                <p>Carat Weight</p>
+            </div>
+            <div class="col-md-6">
+                <p>1.75</p>
+            </div>
+            <div class="col-md-6">
+                <p>Color</p>
+            </div>
+            <div class="col-md-6">
+                <p>F</p>
+            </div>
+            <div class="col-md-6">
+                <p>Clarity</p>
+            </div>
+            <div class="col-md-6">
+                <p>VVS1</p>
+            </div>
+            <div class="col-md-6">
+                <p>Girdle</p>
+            </div>
+            <div class="col-md-6">
+                <p>Medium Thick-Thick</p>
+            </div>
+            <div class="col-md-6">
+                <p>Cert</p>
+            </div>
+            <div class="col-md-6">
+                <p>GIA</p>
+            </div>
+            <div class="col-md-6">
+                <p>Polish</p>
+            </div>
+            <div class="col-md-6">
+                <p>Very Good</p>
+            </div>
+            <div class="col-md-6">
+                <p>Culet</p>
+            </div>
+            <div class="col-md-6">
+                <p>None</p>
+            </div>
+            <div class="col-md-6">
+                <p>Symmetry</p>
+            </div>
+            <div class="col-md-6">
+                <p>Very Good</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Chat Live Now</button>
+        </div>
+
+        <div class="row margin_box">
+            <div class="col-md-12 social">
+                <a href="#"><i class="fa fa-envelope"></i></a>
+                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Custom Modal 1 End-->
+
+<!-- Custom Modal 2-->
+<div class="custom-modal" id="custom-modal-2">
+    <span class="close-custom-modal"><i class="fa fa-close"></i></span>
+    <div class="container-fluid custom-modal-content">
+        <img src="img/summary.png" alt="summary" class="venori_logo img-responsive">
+        <div class="row">
+            <div class="col-md-9">
+                <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Request Live Consultation
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">GIA</button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h2>1.50 Carat Round Diamond</h2>
+            <p><a href="#"><i class="fa fa-truck" aria-hidden="true"></i></a>
+                Will be ready by Nov.1, 2016 loose,
+                and ready by Nov.11, 2016 mounted in a ring</p>
+            <h2>Diamond Specifications</h2>
+        </div>
+        <div class="col-md-6">
+            <div class="dropdown">
+                <button class="btn btn-lg btn-primary btn-default dropdown-toggle dropdownMenu" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    ADD DIAMOND
+                    <span class="fa fa-caret-down text-left"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Add to cart</a></li>
+                    <li><a href="#">Settings</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Compare</button>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <p>Sku #</p>
+            </div>
+            <div class="col-md-6">
+                <p>897123213</p>
+            </div>
+            <div class="col-md-6">
+                <p>Cut</p>
+            </div>
+            <div class="col-md-6">
+                <p>Ideal</p>
+            </div>
+            <div class="col-md-6">
+                <p>Fluorescence</p>
+            </div>
+            <div class="col-md-6">
+                <p>None</p>
+            </div>
+            <div class="col-md-6">
+                <p>L/W/D</p>
+            </div>
+            <div class="col-md-6">
+                <p>1.00 mm</p>
+            </div>
+            <div class="col-md-6">
+                <p>Depth %</p>
+            </div>
+            <div class="col-md-6">
+                <p>63.70</p>
+            </div>
+            <div class="col-md-6">
+                <p>Table</p>
+            </div>
+            <div class="col-md-6">
+                <p>57.00</p>
+            </div>
+            <div class="col-md-6">
+                <p>Shape</p>
+            </div>
+            <div class="col-md-6">
+                <p>Round</p>
+            </div>
+            <div class="col-md-6">
+                <p>Carat Weight</p>
+            </div>
+            <div class="col-md-6">
+                <p>1.75</p>
+            </div>
+            <div class="col-md-6">
+                <p>Color</p>
+            </div>
+            <div class="col-md-6">
+                <p>F</p>
+            </div>
+            <div class="col-md-6">
+                <p>Clarity</p>
+            </div>
+            <div class="col-md-6">
+                <p>VVS1</p>
+            </div>
+            <div class="col-md-6">
+                <p>Girdle</p>
+            </div>
+            <div class="col-md-6">
+                <p>Medium Thick-Thick</p>
+            </div>
+            <div class="col-md-6">
+                <p>Cert</p>
+            </div>
+            <div class="col-md-6">
+                <p>GIA</p>
+            </div>
+            <div class="col-md-6">
+                <p>Polish</p>
+            </div>
+            <div class="col-md-6">
+                <p>Very Good</p>
+            </div>
+            <div class="col-md-6">
+                <p>Culet</p>
+            </div>
+            <div class="col-md-6">
+                <p>None</p>
+            </div>
+            <div class="col-md-6">
+                <p>Symmetry</p>
+            </div>
+            <div class="col-md-6">
+                <p>Very Good</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Chat Live Now</button>
+        </div>
+
+        <div class="row margin_box">
+            <div class="col-md-12 social">
+                <a href="#"><i class="fa fa-envelope"></i></a>
+                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Custom Modal 2 End-->
+
+<!-- Custom Modal 3-->
+<div class="custom-modal" id="custom-modal-3">
+    <span class="close-custom-modal"><i class="fa fa-close"></i></span>
+    <div class="container-fluid custom-modal-content">
+        <img src="img/summary.png" alt="summary" class="venori_logo img-responsive">
+        <div class="row">
+            <div class="col-md-9">
+                <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Request Live Consultation
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">GIA</button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h2>1.50 Carat Round Diamond</h2>
+            <p><a href="#"><i class="fa fa-truck" aria-hidden="true"></i></a>
+                Will be ready by Nov.1, 2016 loose,
+                and ready by Nov.11, 2016 mounted in a ring</p>
+            <h2>Diamond Specifications</h2>
+        </div>
+        <div class="col-md-6">
+            <div class="dropdown">
+                <button class="btn btn-lg btn-primary btn-default dropdown-toggle dropdownMenu" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    ADD DIAMOND
+                    <span class="fa fa-caret-down text-left"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Add to cart</a></li>
+                    <li><a href="#">Settings</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Compare</button>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <p>Sku #</p>
+            </div>
+            <div class="col-md-6">
+                <p>897123213</p>
+            </div>
+            <div class="col-md-6">
+                <p>Cut</p>
+            </div>
+            <div class="col-md-6">
+                <p>Ideal</p>
+            </div>
+            <div class="col-md-6">
+                <p>Fluorescence</p>
+            </div>
+            <div class="col-md-6">
+                <p>None</p>
+            </div>
+            <div class="col-md-6">
+                <p>L/W/D</p>
+            </div>
+            <div class="col-md-6">
+                <p>1.00 mm</p>
+            </div>
+            <div class="col-md-6">
+                <p>Depth %</p>
+            </div>
+            <div class="col-md-6">
+                <p>63.70</p>
+            </div>
+            <div class="col-md-6">
+                <p>Table</p>
+            </div>
+            <div class="col-md-6">
+                <p>57.00</p>
+            </div>
+            <div class="col-md-6">
+                <p>Shape</p>
+            </div>
+            <div class="col-md-6">
+                <p>Round</p>
+            </div>
+            <div class="col-md-6">
+                <p>Carat Weight</p>
+            </div>
+            <div class="col-md-6">
+                <p>1.75</p>
+            </div>
+            <div class="col-md-6">
+                <p>Color</p>
+            </div>
+            <div class="col-md-6">
+                <p>F</p>
+            </div>
+            <div class="col-md-6">
+                <p>Clarity</p>
+            </div>
+            <div class="col-md-6">
+                <p>VVS1</p>
+            </div>
+            <div class="col-md-6">
+                <p>Girdle</p>
+            </div>
+            <div class="col-md-6">
+                <p>Medium Thick-Thick</p>
+            </div>
+            <div class="col-md-6">
+                <p>Cert</p>
+            </div>
+            <div class="col-md-6">
+                <p>GIA</p>
+            </div>
+            <div class="col-md-6">
+                <p>Polish</p>
+            </div>
+            <div class="col-md-6">
+                <p>Very Good</p>
+            </div>
+            <div class="col-md-6">
+                <p>Culet</p>
+            </div>
+            <div class="col-md-6">
+                <p>None</p>
+            </div>
+            <div class="col-md-6">
+                <p>Symmetry</p>
+            </div>
+            <div class="col-md-6">
+                <p>Very Good</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Chat Live Now</button>
+        </div>
+
+        <div class="row margin_box">
+            <div class="col-md-12 social">
+                <a href="#"><i class="fa fa-envelope"></i></a>
+                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Custom Modal 3 End-->
+
+<!--Modal Begins-->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="2" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Summary</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/summary.png" alt="summary" class="venori_logo pull-left img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Request Live Consultation
+                        </button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">GIA</button>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <h2>1.50 Carat Round Diamond</h2>
+                    <p><a href="#"><i class="fa fa-truck" aria-hidden="true"></i></a>
+                        Will be ready by Nov.1, 2016 loose,
+                        and ready by Nov.11, 2016 mounted in a ring</p>
+                    <h2>Diamond Specifications</h2>
+                </div>
+                <div class="col-md-6">
+                    <div class="dropdown">
+                        <button class="btn btn-lg btn-primary btn-default dropdown-toggle dropdownMenu" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            ADD DIAMOND
+                            <span class="fa fa-caret-down text-left"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Add to cart</a></li>
+                            <li><a href="#">Settings</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Compare</button>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Sku #</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>897123213</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Cut</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Ideal</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Fluorescence</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>None</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>L/W/D</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>1.00 mm</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Depth %</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>63.70</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Table</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>57.00</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Shape</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Round</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Carat Weight</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>1.75</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Color</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>F</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Clarity</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>VVS1</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Girdle</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Medium Thick-Thick</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Cert</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>GIA</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Polish</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Very Good</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Culet</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>None</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Symmetry</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Very Good</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary btn-lg btn_bottom btn_popup">Chat Live Now</button>
+                </div>
+
+                <div class="row margin_box">
+                    <div class="col-md-12 social">
+                        <a href="#"><i class="fa fa-envelope"></i></a>
+                        <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal Ends-->
+
+<div class="b-top"><a href="#scroller"> <span class="b-top-but">UP</span></a></div>
+
+<!-- Footer Begins -->
+<div class="container-fluid bg-color-footer margin_box">
+    <div class="row">
+        <div class="container">
+            <div class="col-md-12 col-sm-12 menu_foot_inner">
+                <ul class="col-md-3 col-sm-3 text-left menu_foot">
+                    <li><h2>Experience Venori</h2></li>
+                    <li><a href="live_streaming.html">Innovative live streaming technology</a></li>
+                    <li><a href="faq.html#worldwide">Free shipping worldwide</a></li>
+                    <li><a href="financing_options.html">Financing options</a></li>
+                    <li><a href="live_streaming.html">Expert gemologists consultations</a></li>
+                    <li><a href="custom.html">Custom ring design</a></li>
+                </ul>
+                <ul class="col-md-3 col-sm-3 text-left menu_foot">
+                    <li><h2>Policies</h2></li>
+                    <li><a href="faq.html#return_policy">30 day return policy</a></li>
+                    <li><a href="faq.html#ring_size">90 day free ring sizing</a></li>
+                    <li><a href="faq.html">Diamond price match</a></li>
+                    <li><a href="faq.html">Upgrade policy</a></li>
+                </ul>
+                <ul class="col-md-3 col-sm-3 text-left menu_foot">
+                    <li><h2>About Us</h2></li>
+                    <li><a href="why_venori.html">Why Venori?</a></li>
+                    <li><a href="blog.html">Our Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="review.html">Venori Reviews</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+                <ul class="col-md-3 col-sm-3 text-left menu_foot">
+                    <li><h2>Education</h2></li>
+                    <li><a href="education_diamonds.html#the_fourth">The 4 C’s</a></li>
+                    <li><a href="education_diamonds.html">Diamonds</a></li>
+                    <li><a href="education_metal.html">Precious Metals</a></li>
+                    <li><a href="education_engagement.html">Engagement Rings</a></li>
+                    <li><a href="faq.html">Conflict Free Diamonds</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container-fluid bg_rights">
+    <div class="col-md-12 text-center rights">
+        <p>www.venori.com 2016 All rights reserved.</p>
+    </div>
+</div>
+<!-- Footer Ends -->
+
+
+<!-- Javascript Begins -->
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+<script type="text/javascript"
+        src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+<script>
+    $('ul.nav li.mega-dropdown').hover(function () {
+        $(this).find('.mega-dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+    }, function () {
+        $(this).find('.mega-dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+    });
+</script>
+
+<script>
+    var ex2 = $("#ex2").slider({
+        id: "ex2", min: 0, max: 700, range: true, value: [100, 500]
+    });
+    var ex4 = $("#ex4").slider({
+        id: "ex2", value: [5000, 40000]
+    });
+    $("#ex4").on("slide", function (slideEvt) {
+        var startNum, endNum;
+        var nums = slideEvt.value + " ";
+        var arr = nums.split(",");
+
+        startNum = "$" + arr[0];
+        endNum = "$" + arr[1];
+
+
+        $("#ex4StartNum").text(startNum);
+        $("#ex4EndNum").text(endNum);
+    });
+    var ex3 = $("#ex3").slider({
+        id: "ex3", value: [5, 25]
+    });
+    $("#ex3").on("slide", function (slideEvt) {
+        $("#sliderValueEx3").text(slideEvt.value);
+    });
+
+    $("#ex3").on("slide", function (slideEvt) {
+        var startNum, endNum;
+        var nums = slideEvt.value + " ";
+        var arr = nums.split(",");
+
+        startNum = arr[0];
+        endNum = arr[1];
+
+
+        $("#ex3StartNum").text(startNum);
+        $("#ex3EndNum").text(endNum);
+    });
+
+
+    var ex5 = $("#ex5").slider({
+        id: "ex2", min: 0, max: 4, range: true, value: [2, 3]
+    });
+    var ex6 = $("#ex6").slider({
+        id: "ex6", min: 0, max: 8, range: true, value: [100, 700]
+    });
+    //    Date Time
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+    });
+
+
+    //     Show hide Filters
+    var showHide = $("#showHideFilters").click(function () {
+        $(".advanced_options").toggleClass("hideFilter");
+        $(this).text(function (i, text) {
+            return text === "ADVANCED FILTERS" ? "HIDE FILTERS" : "ADVANCED FILTERS";
+        })
+    });
+
+    //     shape_border active
+    $(".shape_border").click(function () {
+        $(this).toggleClass("shape_border_active");
+    });
+    //     Show hide Filters
+    $("#resetOptions").click(function () {
+        ex2.slider('refresh');
+        ex3.slider('refresh');
+        ex4.slider('refresh');
+        ex5.slider('refresh');
+        ex6.slider('refresh');
+        $("#dateTime").val("");
+        $(".shape_border").removeClass("shape_border_active");
+    });
+
+    $(".close-custom-modal").click(function () {
+        $(".custom-modal").removeClass("show-modal");
+    });
+
+    $(".diamondPopup1").click(function () {
+        $(".custom-modal").removeClass("show-modal");
+        $("#custom-modal-1").addClass("show-modal");
+    });
+
+    $(".diamondPopup2").click(function () {
+        $(".custom-modal").removeClass("show-modal");
+        $("#custom-modal-2").addClass("show-modal");
+    });
+
+    $(".diamondPopup3").click(function () {
+        $(".custom-modal").removeClass("show-modal");
+        $("#custom-modal-3").addClass("show-modal");
+    });
+    /*Country selected*/
+    $(".countries li a").click(function(){
+        $(this).parents(".countries-dropdown").find('.dropdownMenu2').html('<i class="fa fa-flag"></i> ' + $(this).text() + ' <span class="fa fa-caret-down hidden-xs"></span>');
+        $(this).parents(".countries-dropdown").find('.dropdownMenu2').val($(this).data('value'));
+    });
+</script>
+
+</body>
+
+</html>
+
