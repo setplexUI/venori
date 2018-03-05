@@ -1,0 +1,26 @@
+body, html {
+  margin: 0; }
+
+.box {
+  background: url(../img/call1.jpg) no-repeat;
+  max-width: 500px;
+  height: 400px;
+  background-size: cover;
+  margin: 0 auto; }
+
+.logo-lend {
+  display: inline-block;
+  text-align: center;
+  margin: 30px auto; }
+
+.margin-lending {
+  margin-right: 30px;
+  margin-bottom: 30px; }
+
+.jewelry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+
+/*# sourceMappingURL=landing.css.map */
