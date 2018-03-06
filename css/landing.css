@@ -1,26 +1,229 @@
+@font-face {
+  font-family: 'Arizonia-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/Arizonia-Regular.woff2) format("woff2"), url(../fonts/Arizonia-Regular.woff) format("woff"), url(../fonts/Arizonia-Regular.otf) format("otf"), url(../fonts/Arizonia-Regular.ttf) format("truetype"), url(../fonts/Arizonia-Regular.svg) format("svg"), url(../fonts/Arizonia-Regular.eot) format("eot"); }
+@font-face {
+  font-family: 'playfair_displayregular';
+  src: url(../fonts/playfairdisplay-regular-webfont.eot);
+  src: url(../fonts/playfairdisplay-regular-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/playfairdisplay-regular-webfont.woff2) format("woff2"), url(../fonts/playfairdisplay-regular-webfont.woff) format("woff"), url(../fonts/playfairdisplay-regular-webfont.ttf) format("truetype"), url(../fonts/playfairdisplay-regular-webfont.svg#playfair_displayregular) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'latoregular';
+  src: url(../fonts/lato-regular-webfont.eot);
+  src: url(../fonts/lato-regular-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/lato-regular-webfont.woff2) format("woff2"), url(../fonts/lato-regular-webfont.woff) format("woff"), url(../fonts/lato-regular-webfont.ttf) format("truetype"), url(../fonts/lato-regular-webfont.svg#latoregular) format("svg");
+  font-weight: normal;
+  font-style: normal; }
 body, html {
-  margin: 0; }
+  margin: 0;
+  padding: 0;
+  background: #fcf0ed;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'latoregular', sans-serif;
+  font-size: 18px; }
 
-.box {
-  background: url(../img/call1.jpg) no-repeat;
-  max-width: 500px;
-  height: 400px;
-  background-size: cover;
-  margin: 0 auto; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'playfair_displayregular', serif;
+  color: rgba(0, 0, 0, 0.7); }
+  h1.specialFont, h2.specialFont, h3.specialFont, h4.specialFont, h5.specialFont, h6.specialFont {
+    font-family: 'Arizonia-Regular', serif; }
 
-.logo-lend {
-  display: inline-block;
-  text-align: center;
-  margin: 30px auto; }
-
-.margin-lending {
-  margin-right: 30px;
-  margin-bottom: 30px; }
-
-.jewelry {
+.underConstructionWrapper .header {
+  background: #fed3c7;
+  background: -moz-linear-gradient(top, #fed3c7 0%, #fcf0ed 100%);
+  background: -webkit-linear-gradient(top, #fed3c7 0%, #fcf0ed 100%);
+  background: linear-gradient(to bottom, #fed3c7 0%, #fcf0ed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed3c7', endColorstr='#fcf0ed',GradientType=0 );
+  padding: 30px 0; }
+.underConstructionWrapper .jewelry {
+  padding: 0 15px;
+  margin: 50px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  flex-wrap: wrap; }
+  .underConstructionWrapper .jewelry h3 {
+    max-width: 980px;
+    text-align: right;
+    font-size: 2em;
+    line-height: 2; }
+.underConstructionWrapper .box {
+  width: 700px;
+  height: 508px;
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+  margin: 40px; }
+  .underConstructionWrapper .box.box3 {
+    width: 380px;
+    height: 380px;
+    margin: 0;
+    display: inline-block; }
+    .underConstructionWrapper .box.box3.boxLeft .boxBefore {
+      background: url(../img/underconstruction/box1-before.png) no-repeat; }
+    .underConstructionWrapper .box.box3.boxLeft .boxAfter {
+      background: url(../img/underconstruction/box1-after.png) no-repeat; }
+    .underConstructionWrapper .box.box3.boxLeft .boxAfterBigger {
+      background: url(../img/underconstruction/box1-after.png) no-repeat; }
+    .underConstructionWrapper .box.box3.boxMid .boxBefore {
+      background: url(../img/underconstruction/box2-before.png) no-repeat; }
+    .underConstructionWrapper .box.box3.boxMid .boxAfter {
+      background: url(../img/underconstruction/box2-after.png) no-repeat; }
+    .underConstructionWrapper .box.box3.boxMid .boxAfterBigger {
+      background: url(../img/underconstruction/box2-after.png) no-repeat; }
+    .underConstructionWrapper .box.box3.boxRight .boxBefore {
+      background: url(../img/underconstruction/box3-before.png) no-repeat; }
+    .underConstructionWrapper .box.box3.boxRight .boxAfter {
+      background: url(../img/underconstruction/box3-after.png) no-repeat; }
+    .underConstructionWrapper .box.box3.boxRight .boxAfterBigger {
+      background: url(../img/underconstruction/box3-after.png) no-repeat; }
+    .underConstructionWrapper .box.box3:hover .boxAfter, .underConstructionWrapper .box.box3:hover .boxAfterBigger {
+      opacity: 1; }
+    .underConstructionWrapper .box.box3 .boxBefore {
+      background-size: 400px 400px;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      cursor: none;
+      border-radius: 20px; }
+    .underConstructionWrapper .box.box3 .boxAfter {
+      background-size: 400px 400px;
+      width: 110px;
+      height: 110px;
+      position: absolute;
+      z-index: 2;
+      border-radius: 100px;
+      cursor: none;
+      opacity: 0; }
+    .underConstructionWrapper .box.box3 .boxAfterBigger {
+      width: 116px;
+      height: 116px;
+      position: absolute;
+      z-index: 1;
+      content: ' ';
+      border-radius: 120px;
+      cursor: none;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      opacity: 0; }
+  .underConstructionWrapper .box .sketchPic {
+    background: url(../img/underconstruction/firstImg-blue.png) no-repeat;
+    background-size: 700px 508px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: none;
+    border-radius: 20px; }
+  .underConstructionWrapper .box:hover .realPic, .underConstructionWrapper .box:hover .circlePic {
+    opacity: 1; }
+  .underConstructionWrapper .box .realPic {
+    background: url(../img/underconstruction/firstImg.png) no-repeat;
+    background-size: 700px 508px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 100px;
+    cursor: none;
+    opacity: 0; }
+  .underConstructionWrapper .box .circlePic {
+    background: url(../img/underconstruction/firstImg.png) no-repeat;
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    z-index: 1;
+    content: ' ';
+    border-radius: 120px;
+    cursor: none;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    opacity: 0; }
+.underConstructionWrapper .ba-slider {
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+  margin: 50px auto; }
+  .underConstructionWrapper .ba-slider .ba-slider img {
+    width: 100%;
+    display: block; }
+  .underConstructionWrapper .ba-slider .resize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden; }
+  .underConstructionWrapper .ba-slider .handle {
+    /* Thin line seperator */
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    margin-left: -2px;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: ew-resize; }
+  .underConstructionWrapper .ba-slider .handle:after {
+    /* Big orange knob  */
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+    content: '\21d4';
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    line-height: 64px;
+    background: #ffb800;
+    /* @orange */
+    border: 1px solid #e6a600;
+    /* darken(@orange, 5%) */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 60px 50px -30px #ffd466;
+    /* lighten(@orange, 20%)*/ }
+  .underConstructionWrapper .ba-slider .draggable:after {
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    line-height: 48px;
+    font-size: 30px; }
+.underConstructionWrapper .ourWork {
+  margin: 50px auto;
+  text-align: center; }
+  .underConstructionWrapper .ourWork h2 {
+    font-family: 'Arizonia-Regular', serif;
+    font-size: 5em; }
+
+@media screen and (max-width: 750px) {
+  .underConstructionWrapper {
+    width: 100%; }
+    .underConstructionWrapper .ba-slider {
+      width: 100%; }
+      .underConstructionWrapper .ba-slider > img {
+        display: none; }
+      .underConstructionWrapper .ba-slider .resize {
+        width: 100%;
+        position: relative; }
+      .underConstructionWrapper .ba-slider .handle {
+        display: none; }
+    .underConstructionWrapper .box.box3 {
+      width: 100%;
+      margin-bottom: 10px; }
+    .underConstructionWrapper .jewelry {
+      flex-direction: column; }
+      .underConstructionWrapper .jewelry h3 {
+        line-height: 1.5; }
+      .underConstructionWrapper .jewelry .sketchPic, .underConstructionWrapper .jewelry .circlePic {
+        display: none; }
+      .underConstructionWrapper .jewelry .realPic {
+        width: 100%;
+        height: 500px;
+        background-size: contain;
+        position: relative;
+        border-radius: 0;
+        opacity: 1; } }
 
 /*# sourceMappingURL=landing.css.map */

@@ -191,7 +191,7 @@ p {
     color: #fed2b4;
     background-color: #656160;
     border-color: #fff;
-    box-shadow: 0;
+    box-shadow: none;
 }
 
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
@@ -2497,24 +2497,27 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     .shape_bg p {
         margin: 5%;
     }
+
     .bg_about {
         background: url("../img/about3.jpg") no-repeat -330px 0;
-        height:350px;
+        height: 350px;
     }
+
     .bring-store {
         background: url(../img/about.jpg) no-repeat -100px 0;
         height: 342px;
         padding-top: 150px;
     }
-    .bg-assistant-inner{
-    padding: 10px;
+
+    .bg-assistant-inner {
+        padding: 10px;
     }
 
     .happy-couple {
         background: url(../img/happy-couple.jpg) no-repeat 0px 0;
 
+    }
 }
-
 /* Responsive Tweaks End*/
 
 /*8th colum Starts*/
