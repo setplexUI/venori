@@ -4,6 +4,11 @@
   font-style: normal;
   src: url(../fonts/Arizonia-Regular.woff2) format("woff2"), url(../fonts/Arizonia-Regular.woff) format("woff"), url(../fonts/Arizonia-Regular.otf) format("otf"), url(../fonts/Arizonia-Regular.ttf) format("truetype"), url(../fonts/Arizonia-Regular.svg) format("svg"), url(../fonts/Arizonia-Regular.eot) format("eot"); }
 @font-face {
+  font-family: 'CinzelRegular';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/Cinzel-Regular.woff2) format("woff2"), url(../fonts/Cinzel-Regular.woff) format("woff"), url(../fonts/Cinzel-Regular.otf) format("otf"), url(../fonts/Cinzel-Regular.ttf) format("truetype"), url(../fonts/Cinzel-Regular.svg) format("svg"), url(../fonts/Cinzel-Regular.eot) format("eot"); }
+@font-face {
   font-family: 'playfair_displayregular';
   src: url(../fonts/playfairdisplay-regular-webfont.eot);
   src: url(../fonts/playfairdisplay-regular-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/playfairdisplay-regular-webfont.woff2) format("woff2"), url(../fonts/playfairdisplay-regular-webfont.woff) format("woff"), url(../fonts/playfairdisplay-regular-webfont.ttf) format("truetype"), url(../fonts/playfairdisplay-regular-webfont.svg#playfair_displayregular) format("svg");
@@ -24,7 +29,7 @@ body, html {
   font-size: 18px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'playfair_displayregular', serif;
+  font-family: 'CinzelRegular', serif;
   color: rgba(0, 0, 0, 0.7); }
   h1.specialFont, h2.specialFont, h3.specialFont, h4.specialFont, h5.specialFont, h6.specialFont {
     font-family: 'Arizonia-Regular', serif; }
@@ -50,12 +55,14 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2em;
     line-height: 2; }
 .underConstructionWrapper .box {
-  width: 700px;
-  height: 508px;
+  width: 600px;
+  height: 600px;
   position: relative;
   overflow: hidden;
   cursor: none;
-  margin: 40px; }
+  margin: 40px;
+  background: #e8dbdb;
+  border-radius: 600px; }
   .underConstructionWrapper .box.box3 {
     width: 380px;
     height: 380px;
@@ -109,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
       opacity: 0; }
   .underConstructionWrapper .box .sketchPic {
     background: url(../img/underconstruction/firstImg-blue.png) no-repeat;
-    background-size: 700px 508px;
+    background-size: 600px 600px;
     width: 100%;
     height: 100%;
     position: relative;
@@ -119,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1; }
   .underConstructionWrapper .box .realPic {
     background: url(../img/underconstruction/firstImg.png) no-repeat;
-    background-size: 700px 508px;
+    background-size: 600px 600px;
     width: 200px;
     height: 200px;
     position: absolute;
